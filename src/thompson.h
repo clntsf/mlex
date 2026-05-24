@@ -1,5 +1,4 @@
-#ifndef __THOMPSON_H__
-#define __THOMPSON_H__
+#pragma once
 
 typedef struct nfa_expr {
     nfa_node * start;
@@ -31,5 +30,3 @@ nfa_expr * expr_kleene(nfa_expr * this);
 nfa_node * node_new();
 
 nfa_arc * arc_new(nfa_node * from, nfa_node * to, char arc_char);
-
-#endif

@@ -1,6 +1,4 @@
-#ifndef __DFA_TABLE_H__
-#define __DFA_TABLE_H__
-
+#pragma once
 #include <stdbool.h>
 
 typedef struct dfa_state {
@@ -21,5 +19,3 @@ void table_free (dfa_table * table);
 dfa_state * state_new ();
 
 bool add_arc(dfa_state * state_from, char arc, dfa_state * state_to);
-
-#endif
