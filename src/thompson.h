@@ -1,4 +1,5 @@
 #pragma once
+#include <stdlib.h>
 
 typedef struct nfa_expr {
     nfa_node * start;
@@ -10,12 +11,6 @@ typedef struct nfa_node {
     int nchildren;
     int refcount;
 } nfa_node;
-
-typedef struct nfa_arc {
-    nfa_node * to;
-    nfa_arc * next_sibling;
-    char arc_char;
-} nfa_arc;
 
 nfa_expr * expr_new(char c);
 
