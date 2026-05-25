@@ -22,10 +22,10 @@ charset charset_new();
 charset charset_high();
 
 // set bit for char c in set: returns whether c was previously set
-int charset_setchar(charset * this, unsigned char c);
+bool charset_setchar(charset * this, unsigned char c);
 
 // check if char c is in set: boolean (0/1)
-int charset_getchar(charset * this, unsigned char c);
+bool charset_getchar(charset * this, unsigned char c);
 
 // returns a charset corresponding to the regex r"."
 charset charset_dot();
